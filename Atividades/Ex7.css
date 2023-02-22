@@ -1,0 +1,6 @@
+p{
+    transition: 1;
+}
+p:hover{
+    opacity: 0.5;
+}

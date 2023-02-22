@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.icones{
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    gap: 7px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 10px
+}
+header p{
+    font-size: 15px;
+}
+
+header img{
+    width: 20px;
+}
+
+.google{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 200px;
+}
+ div input{
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 50px;
+ }
