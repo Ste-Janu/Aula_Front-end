@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="netflix.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="netflix.css" />
     <title>Document</title>
-</head>
-<body>
-    <img src="logon.png" alt="">
-    <!-- <div class="caixa"> 
-            <p class="Entrar">Entrar</p>
-            <input class="email" type="email">
-            <input class="senha" type="password">
-            <button class="login">Entrar</button>
-    </div> -->
+  </head>
+  <body>
+    <img src="logon.png" alt="" />
 
     <div class="caixa">
-        <div class="entrar">
-            <h1 style="margin-bottom: 25px;">Entrar</h1>
+      <div class="entrar">
+        <h1 style="margin-bottom: 25px">Entrar</h1>
 
-            <input type="text">
+        <input placeholder="Email ou número de telefone" type="email" />
 
-            <input type="text">
+        <input placeholder="Digite sua senha" type="text" />
 
-            <button>Entrar</button>
-            <div class="check">
-                <input type="checkbox" id="checar"> <label for="checar">Lembre-se de mim</label>
-            </div>
+        <button class="entrarButton">Entrar</button>
+
+        <div class="check">
+          <div class="direita">
+            <input type="checkbox" id="checar" />
+            <label for="checar" class="remember">
+                Lembre-se de mim
+            </label>
+          </div>
+          <a>Precisa de ajuda?</a>
         </div>
-        
 
+        <div>
+          <div class="pergunta">
+            Novo por aqui?
+            <a class="assine" target="_self" href="/">Assine agora</a>.
+          </div>
+          <div class="pergunta">
+            Esta página é protegida pelo Google reCAPTCHA para garantir que você
+            não é um robô. <a href="#">Saiba mais.</a>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 *{
     margin: 0;
@@ -11,12 +11,14 @@
 html{
     background-image: url(fundonetflix.jpg);
     overflow: hidden;
+    
 }
 
 .caixa{
     background-color: black;
     width: 400px;
     height: 500px;
+    padding: 60px 68px 40px;
     margin-left: 500px;
     display: flex;
     border-radius: 5px;
@@ -24,13 +26,12 @@ html{
     flex-direction: column;
     gap: 30px;
     padding-top: 0px;
-    opacity: 95%;
+    opacity: 90%;
+    box-sizing: border-box;
 }
 
-
-
  img{
-    width: 150px;
+    width: 167px;
 
 }
 
@@ -45,18 +46,19 @@ html{
 } 
 
 .entrar input{
-    background-color: grey;
+    background-color: #333;
     width: 300px;
-    height: 30px;
+    height: 50px;
     font-size: 13pt;
     border-radius: 6px;
-    color: white;
+    color: #fff;
     border: none;
     margin-bottom: 18px;
-
+    outline: none;
+    padding: 20px 40px;  
 }
 
-.entrar button{
+.entrarButton{
     width: 300px;
     height: 45px; 
     font-family: sans-serif;
@@ -66,52 +68,64 @@ html{
     color: white;
     font-size: 14pt;
     margin-bottom: 0;
+    margin: 20px 0 5px;
 }
 
 .check{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+    color: #b3b3b3;
+    
 }
+
+.check a{
+    font-size: 12px;
+    color: #b3b3b3;
+    
+}
+
+/* .remember {
+    padding: 0;
+} */
+
 .check input{
-    width: 10px;
-    margin-left: 5px;
+    background: #737373;
+    border: 0;
+    border-radius: 2px;
+    height: 16px;
+    left: -20px;
+    width: 16px;
 }
 
 .check label{
-    font-size: 10px;
-
+    font-size: 12px;
+    font-weight: 400;
 }
 
-/*
-.email{
-    background-color: grey;
-    width: 300px;
-    height: 30px;
-    font-size: 13pt;
-    border-radius: 6px;
-    color: rgb(232, 215, 215);
-    border: none;
+.pergunta{
+    color: #737373;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 16px;
+    
 }
 
-.senha{
-    background-color: grey;
-    width: 300px;
-    height: 30px;
-    font-size: 13pt;
-    border-radius: 6px;
-    color: rgb(232, 215, 215);
-    border: none;
+.assine{
+    text-decoration: none;
+    color:white ;
 }
-.login{
-    width: 300px;
-    height: 30px; 
-    font-family: sans-serif;
 
-    cursor: pointer;
-    background-color: #E50914;
-    border-radius: 6px;
-    color: white;
-    font-size: 14pt;
+.assine:hover{
+    text-decoration: underline;
+}
+
+a {
+    text-decoration:none;
+}
+
+/* #checar{
+    height: 0px;
+
 } */
