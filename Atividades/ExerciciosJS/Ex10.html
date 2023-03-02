@@ -7,16 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <select onchange="mudarUrl" id="links">
-        <option selected>Escolha</option>
-        <option value="v1">Video1</Video></option>
-        <option value="v2">Video2</option>
-        <option value="v3">Video3</option>
-        <option value="v4">Video4</option>
-        <option value="v5">Video5</option>
+    <select id="links">
+        <option value="https://www.youtube.com/embed/laE-7s6AvUc">Video1</option>
+        <option value="https://www.youtube.com/embed/SV7TL0hxmIQ">Video2</option>
+        <option value="https://www.youtube.com/embed/Ptbk2af68e8">Video3</option>
+        <option value="https://www.youtube.com/embed/SG65PtP8iSA">Video4</option>
+        <option value="https://www.youtube.com/embed/J9aZMFrnd8s">Video5</option>
     </select>
 
-    <p id="url"></p>
-    <script src="Ex10.js"></script>
+   <iframe width="560" height="315" frameborder="0" allowfullscreen id="url" src="https://www.youtube.com/embed/laE-7s6AvUc" ></iframe>
+    <script >
+
+        let links = document.getElementById("links");
+        let url = document.getElementById('url');
+ 
+        links.addEventListener("change", () => {
+        const selectedOption = links.options[links.selectedIndex];
+        url.src = selectedOption.value;
+      });
+    </script>
 </body>
 </html>
