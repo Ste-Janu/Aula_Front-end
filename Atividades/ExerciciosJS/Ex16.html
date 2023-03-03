@@ -7,15 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    
     <button id="btn">Clique aqui</button>
+
+    <p id="palavra">Oi</p>
     
     <script >
-        function exibirMensagem()
-        {
-            alert("Hello World")
+        function exibirMensagem(){
+            document.getElementById("palavra").innerHTML = "Tchau"   
         }
-         
+        
         let btn = document.getElementById("btn");
  
         btn.addEventListener("click", exibirMensagem);
