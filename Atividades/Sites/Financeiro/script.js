@@ -17,7 +17,8 @@ const addTransacoesNoDom = transacoes =>{
     li.classList.add(CSSclass)
     li.innerHTML = (`${transacoes.id} <span> ${operador} R$ ${amoutSemOp} </span><button id="delete-btn">x</button>`);
     
+    transacoesUl.append(li)
 
 }
 
-addTransacoesNoDom(dummytransacoes[2])
+addTransacoesNoDom(dummytransacoes[0])
