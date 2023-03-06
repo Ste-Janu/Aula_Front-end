@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <script src="script.js"></script>         
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 </head>
 <body>
     <header>
@@ -28,8 +31,23 @@
     <main>
         <div class="meio">
             <div class="central">
-                <button id="novaTransacao">+ Nova Transação</button>
-                <table class = "tabela">
+                <div class="novaTransacao">
+                    <p>Nova transação</p>
+                    <form class="transacao" action="adicionarTransacao">
+                        <select id="transacao">
+                            <option value="selecione" selected></option>
+                            <option value="saque">Saque</option>
+                            <option value="deposito">Depósito</option>
+                        </select>
+                        <input placeholder="Valor" type="text" class="form-control" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});">                        
+                        <input type="date">
+                        <button id="addTransacao">Adicionar</button>
+                    </form>
+                </div>
+                <ul id="transacoes" class="transacoes">
+                    
+                </ul>
+                <!-- <table class = "tabela">
                     <thead>
                         <tr>
                             <th>Descrição</th>
@@ -40,25 +58,17 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th>dado</th>
-                            <th>dado</th>
-                            <th>dado</th>
-                            <th></th>
+                            <td>dado</td>
+                            <td>dado</td>
+                            <td>dado</td>
+                            <td></td>
                         </tr>
                     </tbody>
-                </table>
+                </table> -->
             </div>        
             
         </div>
     </main>
-
-
-
-
-
-
-
-
 
 
 </body>
