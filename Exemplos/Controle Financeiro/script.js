@@ -14,8 +14,14 @@ let transacoes = localStorage
 
 
 const removerTransacao = ID => {
-    transacoes = transacoes.filter(transacoes => transacoes.id !== ID)
+    transacoes = transacoes.filter(transacoes => 
+    transacoes.id !== ID)
+    updateLocalStorage()
     init()
+}
+
+const updateLocalStorage = () =>{
+    localStorage.setItem('transacoes', JSON.stringify(transacoes))
 }
 
 const addTransacoesNoDom = transacoes =>{
@@ -75,15 +81,16 @@ form.addEventListener('submit', event => {
         return
     }
 
-    const transacoes = {
+    const transacao = {
         id: gerarId(), 
         name: transacaoNome, 
         amount: Number(transacaoValor) 
     }
 
-    transacoes.push(transacoes)
+    transacoes.push(transacao)
     init()
 
+    updateLocalStorage()
     inputTransacaoNome.value = '';
     inputTransacaoValor.value = '';
 })
