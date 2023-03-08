@@ -17,12 +17,15 @@
         <div class="movimentacao">
             <div class="entradas" >
                 <p>Entradas</p><i class="fa-sharp fa-regular fa-circle-up"></i>
+                <p id="num-entrada">0.00</p>
             </div>
             <div class="saidas" >
                 <p>Saidas</p><i class="fa-regular fa-circle-down"></i>
+                <p id="num-saida">0.00</p>
             </div>
             <div class="saldo" >
                 <p>Saldo</p><i class="fa-regular fa-dollar-sign"></i> 
+                <p id="num-total">0.00</p>
             </div>
         </div>
     </header>
@@ -33,21 +36,15 @@
             <div class="central">
                 <div class="novaTransacao">
                     <p>Nova transação</p>
-                    <form class="transacao" action="adicionarTransacao">
-                        <select id="transacao">
-                            <option value="selecione" selected></option>
-                            <option value="saque">Saque</option>
-                            <option value="deposito">Depósito</option>
-                        </select>
-                        <input placeholder="Valor" type="text" class="form-control" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});">                        
-                        <input type="date">
-                        <button id="addTransacao">Adicionar</button>
+                    <form class="transacao" >
+                        <input type="text" placeholder="Descrição" id="descricao" />
+                         <input id="valor" placeholder="Valor" type="number">
+                        <!-- <input id="valor" placeholder="Valor" type="number" class="form-control" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});">                         -->
+                        <input id="data" type="date">
+                        <button onclick="adicionarTransacao()" id="addTransacao">Adicionar</button>
                     </form>
                 </div>
-
-                <ul id="transactions" class="transactions"></ul>
-                
-                <!-- <table class = "tabela">
+                <table class = "tabela">
                     <thead>
                         <tr>
                             <th>Descrição</th>
@@ -56,15 +53,15 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody id="tbody">
+                        <!-- <tr>
                             <td>dado</td>
                             <td>dado</td>
                             <td>dado</td>
                             <td></td>
-                        </tr>
+                        </tr> -->
                     </tbody>
-                </table> -->
+                </table>
             </div>        
             
         </div>

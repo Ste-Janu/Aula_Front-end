@@ -1,24 +1,52 @@
-const transacoesUl = document.querySelector('#transactions');
-console.log(transacoesUl)
+let transacoes = [];
 
-const dummytransacoes = [
-    {id: 123, amount: 150, date: 06-03-2022},
-    {id: 456, amount: 350, date: 06-03-2022},
-    {id: 789, amount: -29, date: 06-03-2022},
-    {id: 987, amount: -45, date: 06-03-2022}
-];
+const adicionarTransacao = () => {
+  let desc = document.querySelector("#descricao").value;
 
-const addTransacoesNoDom = transacoes =>{
-    const operador = transacoes.amount < 0 ? "-" : "+";
-    const CSSclass = transacoes.amount < 0 ? "minus" : "plus";
-    const amoutSemOp = Math.abs(transacoes.amount)
-    const li = document.createElement("li")
+  let valor = document.querySelector("#valor").value;
 
-    li.classList.add(CSSclass)
-    li.innerHTML = (`${transacoes.id} <span> ${operador} R$ ${amoutSemOp} </span><button id="delete-btn">x</button>`);
-    
-    transacoesUl.append(li)
+  let data = document.querySelector("#data").value;
 
-}
+  let transacao = { descricao: desc, valor: valor, data: data };
+  transacoes.push(transacao);
 
-addTransacoesNoDom(dummytransacoes[0])
+  if (valor >= 0) {
+    entrada = valor;
+  }
+  Atualizar();
+};
+
+const removerTransacao = (index) => {
+  transacoes.splice(index, 1);
+  Atualizar();
+};
+
+const Atualizar = () => {
+  let entrada = 0;
+  let saida = 0;
+  let total = 0;
+  let tbody = document.querySelector("#tbody");
+  tbody.innerHTML = "";
+
+  transacoes.forEach(function (transacao, index) {
+    let row = `
+        <tr>
+        <td>${transacao.descricao}</td>
+        <td>R$ ${transacao.valor}</td>
+        <td>${transacao.data}</td>
+        <td><button class="removerTransacao" onclick="removerTransacao(${index})"><img src="images/remover.png" alt="" /></button></td>
+        </tr>
+        `;
+    total += parseFloat(transacao.valor.replace(",", "."));
+    tbody.innerHTML += row;
+
+    if (transacao.valor >= 0) {
+      entrada += parseFloat(transacao.valor.replace(",", "."));
+    } else {
+      saida += parseFloat(transacao.valor.replace(",", "."));
+    }
+  });
+  document.querySelector("#num-total").textContent = total.toFixed(2);
+  document.querySelector("#num-entrada").textContent = entrada.toFixed(2);
+  document.querySelector("#num-saida").textContent = saida.toFixed(2);
+};
