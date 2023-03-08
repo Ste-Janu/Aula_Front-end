@@ -46,6 +46,7 @@ const Atualizar = () => {
       saida += parseFloat(transacao.valor.replace(",", "."));
     }
   });
+  
   document.querySelector("#num-total").textContent = total.toFixed(2);
   document.querySelector("#num-entrada").textContent = entrada.toFixed(2);
   document.querySelector("#num-saida").textContent = saida.toFixed(2);
