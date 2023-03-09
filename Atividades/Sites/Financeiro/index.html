@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <script src="script.js"></script>         
-   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  </head>
+  <body>
     <header>
-        <p class="nomebanco">Dev.Finance $</p>
-        <div class="movimentacao">
-            <div class="entradas" >
-                <p>Entradas</p><i class="fa-sharp fa-regular fa-circle-up"></i>
-                <p id="num-entrada">0.00</p>
-            </div>
-            <div class="saidas" >
-                <p>Saidas</p><i class="fa-regular fa-circle-down"></i>
-                <p id="num-saida">0.00</p>
-            </div>
-            <div class="saldo" >
-                <p>Saldo</p><i class="fa-regular fa-dollar-sign"></i> 
-                <p id="num-total">0.00</p>
-            </div>
+      <p class="nomebanco">Dev.Finance $</p>
+      <div class="movimentacao">
+        <div class="entradas">
+          <div class="cima">
+            <p>Entradas</p>
+            <i class="fa-sharp fa-regular fa-circle-up"></i>
+          </div>
+          <p id="num-entrada">0.00</p>
         </div>
+        <div class="saidas">
+          <div class="cima">
+            <p>Saidas</p>
+            <i class="fa-regular fa-circle-down"></i>
+          </div>
+          <p id="num-saida">0.00</p>
+        </div>
+        <div class="saldo">
+          <div class="cima">
+            <p>Saldo</p>
+            <i class="fa-regular fa-dollar-sign"></i>
+          </div>
+          <p id="num-total">0.00</p>
+        </div>
+      </div>
     </header>
 
-
     <main>
-        <div class="meio">
-            <div class="central">
-                <div class="novaTransacao">
-                    <p>Nova transação</p>
-                    <form class="transacao" >
-                        <input type="text" placeholder="Descrição" id="descricao" />
-                        <input id="valor" placeholder="Valor" type="number">
-                        <!-- <input id="valor" placeholder="Valor" type="number" class="form-control" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});">                         -->
-                        <input id="data" type="date">
-                        <button onclick="adicionarTransacao()" id="addTransacao">Adicionar</button>
-                    </form>
-                </div>
-                <table class = "tabela">
-                    <thead>
-                        <tr>
-                            <th>Descrição</th>
-                            <th>Valor</th>
-                            <th>Data</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody">
-                        <!-- <tr>
-                            <td>dado</td>
-                            <td>dado</td>
-                            <td>dado</td>
-                            <td></td>
-                        </tr> -->
-                    </tbody>
-                </table>
-            </div>        
-            
+      <div class="meio">
+        <div class="central">
+          <div class="novaTransacao">
+            <p>Nova transação</p>
+            <div class="transacao">
+              <input type="text" placeholder="Descrição" id="descricao" />
+              <input id="valor" placeholder="Valor" type="number" />
+              <!-- <input id="valor" placeholder="Valor" type="number" class="form-control" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});">                         -->
+              <input id="data" type="date" />
+              <button onclick="adicionarTransacao()" id="addTransacao">
+                Adicionar
+              </button>
+            </div>
+          </div>
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Data</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
         </div>
+      </div>
     </main>
 
-<!-- https://www.youtube.com/watch?v=xarRciYWT5Q  ----- 01:03-->
-</body>
+    <!-- https://www.youtube.com/watch?v=xarRciYWT5Q  ----- 01:03-->
+  </body>
 </html>

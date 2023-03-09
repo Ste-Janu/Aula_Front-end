@@ -29,9 +29,6 @@ header{
     border-radius: 10px;
     font-size: 14px;
     text-align: left;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     transition: 0.5s;   
     border-left: 6px solid rgb(151, 214, 55);
 }
@@ -56,9 +53,6 @@ header{
     font-size: 14px;
     text-align: left;
     transition: 0.5s;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     border-left: 6px solid rgb(151, 214, 55);
 }
 
@@ -69,6 +63,12 @@ header{
 
 .saidas:hover{
     transform: scale(1.2); 
+}
+
+.cima{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .saldo{
@@ -83,9 +83,7 @@ header{
     font-size: 14px;
     text-align: left;
     transition: 0.5s;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    
 }
 .saldo i{
     font-size: 20px;
